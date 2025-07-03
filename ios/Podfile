@@ -5,6 +5,8 @@ require Pod::Executable.execute_command('node', ['-p',
     {paths: [process.argv[1]]},
   )', __dir__]).strip
 
+pod 'WebRTC', :git => 'https://github.com/cloudmix/webrtc-ios-releases.git', :tag => '118.0.0'
+
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
 
@@ -24,6 +26,15 @@ target 'WhepSimplePoc' do
   )
 
   post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      if target.name == 'react-native-webrtc'
+        target.build_configurations.each do |config|
+          config.build_settings['FRAMEWORK_SEARCH_PATHS'] ||= []
+          config.build_settings['FRAMEWORK_SEARCH_PATHS'] << '$(inherited)'
+          config.build_settings['FRAMEWORK_SEARCH_PATHS'] << '$(PODS_ROOT)/WebRTC/**'
+        end
+      end
+    end
     # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
     react_native_post_install(
       installer,

@@ -19,3 +19,18 @@ buildscript {
 }
 
 apply plugin: "com.facebook.react.rootproject"
+
+allprojects {
+    repositories {
+        maven {
+            name = "webrtc"
+            url = uri("https://maven.pkg.github.com/cloudmix/webrtc-android-releases")
+            credentials {
+                username = "token"
+                password = "xxxxxx" // Replace with your GitHub token
+            }
+        }
+        google()
+        mavenCentral()
+    }
+}
