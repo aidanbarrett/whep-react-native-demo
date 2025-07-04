@@ -5,7 +5,7 @@ require Pod::Executable.execute_command('node', ['-p',
     {paths: [process.argv[1]]},
   )', __dir__]).strip
 
-pod 'WebRTC', :git => 'https://github.com/cloudmix/webrtc-ios-releases.git', :tag => '118.0.0'
+pod 'WebRTC', :podspec => 'https://raw.githubusercontent.com/cloudmix/webrtc-ios-releases/0.0.2/WebRTC.podspec'
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
@@ -26,6 +26,7 @@ target 'WhepSimplePoc' do
   )
 
   post_install do |installer|
+
     installer.pods_project.targets.each do |target|
       if target.name == 'react-native-webrtc'
         target.build_configurations.each do |config|

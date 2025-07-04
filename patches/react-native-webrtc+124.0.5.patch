@@ -1,0 +1,10 @@
+diff --git a/node_modules/react-native-webrtc/react-native-webrtc.podspec b/node_modules/react-native-webrtc/react-native-webrtc.podspec
+index 51af1f0..4b7fdfc 100644
+--- a/node_modules/react-native-webrtc/react-native-webrtc.podspec
++++ b/node_modules/react-native-webrtc/react-native-webrtc.podspec
+@@ -19,5 +19,4 @@ Pod::Spec.new do |s|
+   s.libraries           = 'c', 'sqlite3', 'stdc++'
+   s.framework           = 'AudioToolbox','AVFoundation', 'CoreAudio', 'CoreGraphics', 'CoreVideo', 'GLKit', 'VideoToolbox'
+   s.dependency          'React-Core'
+-  s.dependency          'JitsiWebRTC', '~> 124.0.0'
+ end

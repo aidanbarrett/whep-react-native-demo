@@ -8,7 +8,6 @@ PODS:
   - hermes-engine (0.80.0):
     - hermes-engine/Pre-built (= 0.80.0)
   - hermes-engine/Pre-built (0.80.0)
-  - JitsiWebRTC (124.0.2)
   - RCT-Folly (2024.11.18.00):
     - boost
     - DoubleConversion
@@ -1650,7 +1649,6 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
   - react-native-webrtc (124.0.5):
-    - JitsiWebRTC (~> 124.0.0)
     - React-Core
   - React-NativeModulesApple (0.80.0):
     - boost
@@ -2127,7 +2125,7 @@ PODS:
     - React-utils (= 0.80.0)
     - SocketRocket
   - SocketRocket (0.7.1)
-  - WebRTC (118.0.0)
+  - WebRTC (0.0.2)
   - Yoga (0.0.0)
 
 DEPENDENCIES:
@@ -2205,12 +2203,11 @@ DEPENDENCIES:
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - SocketRocket (~> 0.7.1)
-  - WebRTC (from `https://github.com/cloudmix/webrtc-ios-releases.git`, tag `118.0.0`)
+  - WebRTC (from `https://raw.githubusercontent.com/cloudmix/webrtc-ios-releases/0.0.2/WebRTC.podspec`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
-    - JitsiWebRTC
     - SocketRocket
 
 EXTERNAL SOURCES:
@@ -2360,15 +2357,9 @@ EXTERNAL SOURCES:
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
   WebRTC:
-    :git: https://github.com/cloudmix/webrtc-ios-releases.git
-    :tag: 118.0.0
+    :podspec: https://raw.githubusercontent.com/cloudmix/webrtc-ios-releases/0.0.2/WebRTC.podspec
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
-
-CHECKOUT OPTIONS:
-  WebRTC:
-    :git: https://github.com/cloudmix/webrtc-ios-releases.git
-    :tag: 118.0.0
 
 SPEC CHECKSUMS:
   boost: 7e761d76ca2ce687f7cc98e698152abd03a18f90
@@ -2378,7 +2369,6 @@ SPEC CHECKSUMS:
   fmt: a40bb5bd0294ea969aaaba240a927bd33d878cdd
   glog: 5683914934d5b6e4240e497e0f4a3b42d1854183
   hermes-engine: 7068e976238b29e97b3bafd09a994542af7d5c0b
-  JitsiWebRTC: b47805ab5668be38e7ee60e2258f49badfe8e1d0
   RCT-Folly: 846fda9475e61ec7bcbf8a3fe81edfcaeb090669
   RCTDeprecation: ff787f6c860a1b97dd1bc27264b61d23ad1994da
   RCTRequired: 664eb8399ed8a83e26ab65af7c2ad390f7e61696
@@ -2412,7 +2402,7 @@ SPEC CHECKSUMS:
   React-logger: dce52a571ba0e0149c3f0fcc6866cbc0c8552c5e
   React-Mapbuffer: f5754c33877eaf36e4c76c613b35615a181c85c5
   React-microtasksnativemodule: 23df6374a3ac422d8c2927839bcaeed61fee3dad
-  react-native-webrtc: 62659d18a13f6b50ad95c99a9a48cf9872a15815
+  react-native-webrtc: b6ec63fd190d51043d72d5f4060bab4fc5dbd1f5
   React-NativeModulesApple: e16d5c133019987285f001fbf1461a861e40426f
   React-oscompat: 7c0a341cc31e350da71ddf2e46de0a845d1d1626
   React-perflogger: c91e01612298b74f70d846ae3666d2b078c547e0
@@ -2445,9 +2435,9 @@ SPEC CHECKSUMS:
   ReactCodegen: 5d41e1df061200130dd326e55cdfdf94b0289c6e
   ReactCommon: b028d09a66e60ebd83ca59d8cc9a1216360db147
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
-  WebRTC: e8a6afb2163153dd1e9658ec702019a503ce63d5
+  WebRTC: e2388f763dcea20aa9e7735091413db231f85786
   Yoga: 0c4b7d2aacc910a1f702694fa86be830386f4ceb
 
-PODFILE CHECKSUM: 2840696d885515d55c7626d20c133bdd597d7d08
+PODFILE CHECKSUM: c354064aad7811833427b003d7d4a61c2dd5a6f0
 
 COCOAPODS: 1.16.2
