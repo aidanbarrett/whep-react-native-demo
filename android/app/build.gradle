@@ -109,11 +109,11 @@ android {
 
 configurations.all {
     resolutionStrategy {
-        force 'io.cmix:webrtc:118.0.0'
+        force 'io.cmix:webrtc:124.0.3'
         // Alternative: exclude and replace
         eachDependency { details ->
             if (details.requested.group == 'org.jitsi' && details.requested.name == 'webrtc') {
-                details.useTarget group: 'io.cmix', name: 'webrtc', version: '118.0.0'
+                details.useTarget group: 'io.cmix', name: 'webrtc', version: '124.0.3'
             }
         }
     }
@@ -124,7 +124,7 @@ dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 
-    implementation("io.cmix:webrtc:118.0.0")
+    implementation("io.cmix:webrtc:124.0.3")
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")

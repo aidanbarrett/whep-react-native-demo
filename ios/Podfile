@@ -5,7 +5,7 @@ require Pod::Executable.execute_command('node', ['-p',
     {paths: [process.argv[1]]},
   )', __dir__]).strip
 
-pod 'WebRTC', :podspec => 'https://raw.githubusercontent.com/cloudmix/webrtc-ios-releases/0.0.2/WebRTC.podspec'
+pod 'WebRTC', :podspec => 'https://raw.githubusercontent.com/cloudmix/webrtc-ios-releases/124.1.1/WebRTC.podspec'
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
