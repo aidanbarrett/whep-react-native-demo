@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   ) -> Bool {
 
     // Configure the WebRTC audio session to use Movie Playback mode
-    // This prevents microphone access requets when using the patch WebRTC SDK
+    // This prevents microphone access requests when using the patch WebRTC SDK
     configureWebRTCAudioSession()
 
     let delegate = ReactNativeDelegate()
